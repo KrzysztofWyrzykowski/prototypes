@@ -4,25 +4,26 @@
 	<meta charset="UTF-8" />
   <title>Basketball Prototype</title>
 	<script type="text/javascript" src="js/phaser.min.js"></script>
-	<h2>Prototype with <3 for Unit9</h2>
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-				canvas {
-					margin: 0 auto;
-					border: thin solid black;
-				}
-				span {
-					display: block;
-					margin: 30px auto;
-					width: 500px;
-					text-align: center;
-				}
-				h2 {
-					text-align: center;
-				}
-    </style>
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+
+		canvas {
+			margin: 0 auto;
+		}
+
+		span {
+			display: block;
+			margin: 30px auto;
+			width: 500px;
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+		}
+  </style>
 </head>
 <body>
 
@@ -162,7 +163,7 @@ function createBall() {
 	ball = game.add.sprite(xpos, 547, 'ball');
 	game.add.tween(ball.scale).from({x : 0.7, y : 0.7}, 100, Phaser.Easing.Linear.None, true, 0, 0, false);
 	game.physics.p2.enable(ball, false);
-	ball.body.setCircle(60); // NOTE: Goes from 60 to 36
+	ball.body.setCircle(60);
 	ball.launched = false;
 	ball.isBelowHoop = false;
 
